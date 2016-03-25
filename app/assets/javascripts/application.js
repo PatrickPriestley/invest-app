@@ -16,7 +16,8 @@
 //= require bootstrap-datepicker
 //= require turbolinks
 //= require_tree .
+//= require jquery.turbolinks
 
-$(function(){
-  $('#value_portfolio_date_of_trade').datepicker();
+$(function() {
+    $("#value_portfolio_date_of_trade").datepicker();
 });
