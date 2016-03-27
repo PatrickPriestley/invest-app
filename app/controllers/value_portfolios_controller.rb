@@ -20,10 +20,10 @@ class ValuePortfoliosController < ApplicationController
     end
   end
 
-  def get_quote
+  def get_quote (stock_symbol)
     yahoo_client = YahooFinance::Client.new
-    data = yahoo_client.quotes(["AAPL"], [:ask], { raw: false } )
-    data[0].ask
+    data = yahoo_client.quotes([stock_symbol], [:last_trade_price], { raw: false } )
+    data[0].last_trade_price
   end
 
   private
