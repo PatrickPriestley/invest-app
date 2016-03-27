@@ -20,6 +20,12 @@ class ValuePortfoliosController < ApplicationController
     end
   end
 
+  def get_quote
+    yahoo_client = YahooFinance::Client.new
+    data = yahoo_client.quotes(["AAPL"], [:ask], { raw: false } )
+    data[0].ask
+  end
+
   private
   def value_portfolio_params
     params.require(:value_portfolio).permit(:portfolio_name, :initial_investment, :investment_increase, :share_price, :commission_paid, :date_of_trade)
