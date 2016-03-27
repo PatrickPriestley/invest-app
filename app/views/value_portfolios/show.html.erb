@@ -11,6 +11,7 @@
     <thead>
       <tr>
         <th>Date</th>
+        <th>Stock</th>
         <th>Share Price($)</th>
         <th>Current Value($)</th>
         <th>Desired Value($)</th>
@@ -22,6 +23,7 @@
     <tbody>
       <tr>
         <td><%= @value_portfolio.date_of_trade %></td>
+        <td><%= @value_portfolio.stock_symbol %></td>
         <td><%= @value_portfolio.share_price %></td>
         <td><%= @value_portfolio.share_price.to_i * (@value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i) - @value_portfolio.commission_paid.to_i %></td>
         <td></td>
@@ -39,11 +41,13 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tbody>
       <tr>
         <td>Mar 1</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -61,11 +65,13 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tbody>
       <tr>
         <td>May 1</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -83,11 +89,13 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tbody>
       <tr>
         <td>July 1</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -105,11 +113,13 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tbody>
       <tr>
         <td>Sep 1</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -127,6 +137,7 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tbody>
@@ -138,11 +149,13 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
       </tr>
     </tbody>
     <tbody>
       <tr>
         <td>Dec 1</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>

@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160321232012) do
     t.string   "share_price"
     t.string   "commission_paid"
     t.string   "date_of_trade"
+    t.string   "stock_symbol"
     t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false

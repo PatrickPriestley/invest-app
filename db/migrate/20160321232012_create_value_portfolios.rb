@@ -7,6 +7,7 @@ class CreateValuePortfolios < ActiveRecord::Migration
       t.string :share_price
       t.string :commission_paid
       t.string :date_of_trade
+      t.string :stock_symbol
       t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false

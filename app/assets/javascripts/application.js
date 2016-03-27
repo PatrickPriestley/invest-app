@@ -19,5 +19,5 @@
 //= require jquery.turbolinks
 
 $(function() {
-    $("#value_portfolio_date_of_trade").datepicker();
+    $("#value_portfolio_date_of_trade").datepicker({format: 'dd-mm-yyyy'});
 });
