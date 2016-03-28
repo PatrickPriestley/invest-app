@@ -6,6 +6,9 @@
 <h3> Initial Investment <%= @value_portfolio.initial_investment %> </h3>
 <h3> Desired Growth (per month) <%= @value_portfolio.investment_increase %> </h3>
 
+<h3>Current Share Price <%= data = @get_quote.quotes([@value_portfolio.stock_symbol], [:last_trade_price], { raw: false } )
+    data[0].last_trade_price %></h3>
+
 <div class="container">
   <table class="table table-hover">
     <thead>
