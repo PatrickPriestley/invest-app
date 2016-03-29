@@ -5,7 +5,7 @@
 <h1> <%= @value_portfolio.portfolio_name %> </h1>
 <h3> Initial Investment <%= @value_portfolio.initial_investment %> </h3>
 <h3> Desired Growth (per month) <%= @value_portfolio.investment_increase %> </h3>
-<h3>Current Share Price for <%= @value_portfolio.stock_symbol %> <%= data = @get_quote.quotes([@value_portfolio.stock_symbol], [:last_trade_price], { raw: false } )
+<h3>Current Share Price for <%= @value_portfolio.stock_symbol.upcase %> <%= data = @get_quote.quotes([@value_portfolio.stock_symbol], [:last_trade_price], { raw: false } )
                                                                      data[0].last_trade_price %></h3>
 
 <div class="container">
@@ -25,10 +25,10 @@
     <tbody>
       <tr>
         <td><%= @value_portfolio.date_of_trade %></td>
-        <td><%= @value_portfolio.stock_symbol %></td>
+        <td><%= @value_portfolio.stock_symbol.upcase %></td>
         <td><%= @value_portfolio.share_price %></td>
         <td><%= @value_portfolio.share_price.to_i * (@value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i) - @value_portfolio.commission_paid.to_i %></td>
-        <td></td>
+        <td> --- </td>
         <td><%= @value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i %></td>
         <td><%= @value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i %></td>
         <td><%= @value_portfolio.initial_investment.to_i / @value_portfolio.share_price.to_i %></td>
@@ -36,7 +36,7 @@
     </tbody>
     <tbody>
       <tr>
-        <td>Feb 1</td>
+        <td><%= @value_portfolio.date_of_trade.to_date %></td>
         <td></td>
         <td></td>
         <td></td>
