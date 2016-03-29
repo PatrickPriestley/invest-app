@@ -190,12 +190,14 @@ table.lamp, table.w3-table-all {
 }
 table, th, td {
     border: none;
+    text-align: center;
 }
 table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
+    text-align: center;
 }
 * {
     -webkit-box-sizing: border-box;
