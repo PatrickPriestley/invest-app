@@ -18,6 +18,13 @@
 //= require_tree .
 //= require jquery.turbolinks
 
-$(function() {
-    $("#value_portfolio_date_of_trade").datepicker({format: 'dd-mm-yyyy'});
+$(document).ready(function () {
+    $('#value_portfolio_date_of_trade').datepicker({
+      format: "dd/mm/yyyy"
+    });
+
+    $('#value_portfolio_date_of_trade').on('change', function(){
+        $('.datepicker').hide();
+    });
+
 });
