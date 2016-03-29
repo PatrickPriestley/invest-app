@@ -9,12 +9,14 @@
     <thead>
       <tr>
         <th>Portfolio</th>
+        <th>Current Value</th>
       </tr>
     </thead>
     <tbody>
       <% @value_portfolio.each do |value_portfolio| %>
       <tr>
         <td><%= value_portfolio.portfolio_name %></td>
+        <td>$ <%= value_portfolio.share_price.to_i * (value_portfolio.initial_investment.to_i / value_portfolio.share_price.to_i) - value_portfolio.commission_paid.to_i %></td>
         <td><%= link_to 'View Portfolio', value_portfolio_path(value_portfolio) %></td>
       </tr>
       </tr>
