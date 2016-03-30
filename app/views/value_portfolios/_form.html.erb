@@ -4,14 +4,14 @@
     <%= f.label :portfolio_name %>
     <%= f.text_field :portfolio_name, class: 'form-control' %>
 
-    <%= f.label :stock_symbol %>
-    <%= f.text_field :stock_symbol, class: "typeahead form-control", autocomplete: "on", type:"text", id:"typeahead", placeholder:"Stock Symbol"%>
-
     <%= f.label :initial_investment %>
     <%= f.text_field :initial_investment, class: 'form-control'  %>
 
     <%= f.label :investment_increase %>
     <%= f.text_field :investment_increase, class: 'form-control'  %>
+
+    <%= f.label :stock_symbol %>
+    <%= f.text_field :stock_symbol, class: "typeahead form-control", autocomplete: "on", type:"text", id:"typeahead", placeholder:"Stock Symbol"%>
 
     <%= f.label :share_price %>
     <%= f.text_field :share_price, class: 'form-control'  %>
@@ -21,7 +21,6 @@
 
     <%= f.label :date_of_trade %>
     <%= f.text_field :date_of_trade %>
-
 
     <%= f.submit yield(:button_text), class: "btn btn-default" %>
   <% end %>
