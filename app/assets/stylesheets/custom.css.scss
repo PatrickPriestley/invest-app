@@ -276,6 +276,10 @@ html, body {
   margin: 0;
 }
 
+.twitter-typeahead {
+  position: relative !important;
+  display: block !important;
+}
 /* miscellaneous */
 
 .debug_dump {
