@@ -17,6 +17,8 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.turbolinks
+//= require twitter/typeahead
+//= require twitter/typeahead/bloodhound
 
 $(document).ready(function () {
     $('#value_portfolio_date_of_trade').datepicker({

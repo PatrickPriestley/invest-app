@@ -19,6 +19,10 @@ gem 'jbuilder',                '2.2.3'
 gem 'yahoo-finance'
 gem 'bootstrap-datepicker-rails'
 gem 'sdoc',                    '0.4.0', group: :doc
+# Typeahead gem
+gem 'twitter-typeahead-rails'
+gem 'bootstrap-multiselect-rails'
+
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

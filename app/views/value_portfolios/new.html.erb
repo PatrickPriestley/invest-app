@@ -6,3 +6,33 @@
     <%= render 'value_portfolios/form' %>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){
+// app/assets/javascripts/models_controller.js
+
+// initialize bloodhound engine
+var bloodhound = new Bloodhound({
+  datumTokenizer: function (d) {
+    return Bloodhound.tokenizers.whitespace(d.value);
+  },
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+
+  // sends ajax request to /typeahead/%QUERY
+  // where %QUERY is user input
+
+  remote: {
+      url: '/ticker/%QUERY',
+      wildcard: '%QUERY'
+    }
+});
+bloodhound.initialize();
+
+// initialize typeahead widget and hook it up to bloodhound engine
+// #typeahead is just a text input
+$('#typeahead').typeahead(null, {
+  displayKey: 'ticker',
+  source: bloodhound.ttAdapter()
+});
+})
+</script>

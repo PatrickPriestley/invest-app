@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   get 'select'  => 'portfolios#select'
   get 'signup'  => 'users#new'
   get 'login'   => 'sessions#new'
+  get 'ticker/:query' => 'tickers#typeahead'
   post 'login'   => 'sessions#create'
   delete 'logout'   => 'sessions#destroy'
+  resources :ticker
   resources :users
   resources :portfolios
   resources :value_portfolios
