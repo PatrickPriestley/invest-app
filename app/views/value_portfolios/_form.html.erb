@@ -10,6 +10,9 @@
     <%= f.label :investment_increase %>
     <%= f.text_field :investment_increase, class: 'form-control'  %>
 
+    <%= f.label :stock_symbol %>
+    <%= f.text_field :stock_symbol, class: "typeahead form-control", autocomplete: "on", type:"text", id:"typeahead", placeholder:"Stock Symbol"%>
+
     <%= f.label :share_price %>
     <%= f.text_field :share_price, class: 'form-control'  %>
 

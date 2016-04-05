@@ -17,7 +17,16 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.turbolinks
+//= require twitter/typeahead
+//= require twitter/typeahead/bloodhound
 
-$(function() {
-    $("#value_portfolio_date_of_trade").datepicker();
+$(document).ready(function () {
+    $('#value_portfolio_date_of_trade').datepicker({
+      format: "dd/mm/yyyy"
+    });
+
+    $('#value_portfolio_date_of_trade').on('change', function(){
+        $('.datepicker').hide();
+    });
+
 });

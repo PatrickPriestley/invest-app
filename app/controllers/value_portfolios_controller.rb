@@ -4,6 +4,7 @@ class ValuePortfoliosController < ApplicationController
 
   def show
     @value_portfolio = ValuePortfolio.find(params[:id])
+    @get_quote = YahooFinance::Client.new
   end
 
   def new
@@ -20,9 +21,14 @@ class ValuePortfoliosController < ApplicationController
     end
   end
 
+  def get_quote( symbol )
+    data = @get_quote.quotes([symbol], [:last_trade_price], { raw: false } )
+    data[0].last_trade_price
+  end
+
   private
   def value_portfolio_params
-    params.require(:value_portfolio).permit(:portfolio_name, :initial_investment, :investment_increase, :share_price, :commission_paid, :date_of_trade)
+    params.require(:value_portfolio).permit(:portfolio_name, :initial_investment, :investment_increase, :share_price, :commission_paid, :date_of_trade, :stock_symbol)
   end
 
   def correct_user

@@ -44,6 +44,8 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.6.0.1)
       railties (>= 3.0)
+    bootstrap-multiselect-rails (0.9.9)
+      rails (>= 4.0.0)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
@@ -313,6 +315,10 @@ GEM
     tilt (1.4.1)
     turbolinks (2.3.0)
       coffee-rails
+    twitter-typeahead-rails (0.11.1)
+      actionpack (>= 3.1)
+      jquery-rails
+      railties (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.3)
@@ -333,6 +339,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (= 3.1.7)
   bootstrap-datepicker-rails
+  bootstrap-multiselect-rails
   bootstrap-sass (= 3.2.0.0)
   bootstrap-will_paginate (= 0.0.10)
   byebug (= 3.4.0)
@@ -356,6 +363,7 @@ DEPENDENCIES
   spring (= 1.1.3)
   sqlite3 (= 1.3.9)
   turbolinks (= 2.3.0)
+  twitter-typeahead-rails
   uglifier (= 2.5.3)
   web-console (= 2.0.0.beta3)
   will_paginate (= 3.0.7)
